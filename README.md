@@ -28,9 +28,9 @@ _tb:product:auto_update:updated_at| string | - | now()
 ## Index
 prefix:
 
-- primary_key: "${tablename}:pk:${index}"
-- index:  "${tablename}:ix:${index}"
-- unique_index: "${tablename}:uk:${index}"
+- primary_key: `${tablename}:pk:${index}`
+- index: `${tablename}:ix:${index}`
+- unique_index: `${tablename}:uk:${index}`
 
 example:
 
@@ -43,6 +43,7 @@ _product:ix:sales| hash | `100, 200` | `1, 2` (its id)
 ## Record
 
 example:
+
 key | type | field | value
 --- | --- | --- | ---
 _product:1 | hash | `id, name, sales, created_at, updated_at` | `1, nameA, 100, xxx, xxx`
